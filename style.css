@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Karla:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Nunito:wght@600&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Karla:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Nunito:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Bricolage+Grotesque&family=Karla:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Nunito:wght@600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 :root {
-    --main-blue: rgb(76, 128, 241);
-    --light-grey: rgb(165, 165, 165);
+    --main-blue: #2F80ED;
+    --light-grey:#6D6D6D;
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Arimo", "serif";
+    /* overflow: hidden; */
+    font-family: "Poppins";
     scroll-behavior: smooth;
 }
 
@@ -17,11 +18,11 @@ nav {
     display: flex;
     background-color: white;
     width: 100%;
-    height: 8vh;
+    height: 9vh;
     justify-content: space-around;
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 100;
 }
 
 nav #nav-1 {
@@ -33,19 +34,20 @@ nav #nav-1 {
 nav #nav2 {
     width: 45%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* border: 1px solid black; */
     align-items: center;
 }
 
 nav #nav-1>img {
-    width: 50%;
+    width: 60%;
     height: 70%;
     margin-top: 2%;
 }
 
 nav #nav-2 {
     width: 70%;
+    color: #656565;
 }
 
 nav ul {
@@ -53,8 +55,10 @@ nav ul {
     text-decoration: none;
     list-style-type: none;
     /* border: 1px solid black; */
+    font-size: 100%;
     width: 100%;
     justify-content: space-between;
+    color: var(--light-grey);
 }
 
 nav #nav-3 {
@@ -64,26 +68,32 @@ nav #nav-3 {
 
 nav button {
     width: 100%;
-    height: 70%;
-    margin-top: 8%;
-    border-color: blue;
+    height: 78%;
+    margin-top: 5%;
+    border: 3px solid var(--main-blue);
     color: var(--main-blue);
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* nav is ended here */
 header {
     background-color: var(--main-blue);
     width: 100%;
-    height: 4.5vh;
+    height: 5.8vh;
     color: white;
     text-align: center;
     justify-content: center;
-    padding: 5px;
+    padding: 0.6rem;
     position: fixed;
-    top: 8%;
+    /* margin-top: 0.2rem; */
+    top: 9%;
     z-index: 10;
+}
+header p{
+    font-size: 1rem;
+    font-weight: 200;
+    z-index: 100;
 }
 
 /* header is ended here */
@@ -95,49 +105,64 @@ main {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 main #section1 {
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     max-height: max-content;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 main #section1 #div-1 {
-    width: 55vw;
-    height: 65%;
+    /* border: 1px solid black; */
+    width: 50vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 main #section1 #div-1 h1 {
-    font-size: 55px;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 500;
     text-align: left;
+    font-style: italic;
+    margin-top: 10%;
 }
 
-main #section1 #div-1 h1 span {
+main #section1 #div-1 h1 #span1 {
     color: var(--main-blue);
+    font-weight: 600;
+}
+
+main #section1 #div-1 h1 #span2{
+    font-weight: 600;
 }
 
 main #section1 #div-1 p {
     color: var(--light-grey);
     text-align: left;
+    word-spacing: 0.2rem;
+    font-size: 1.2rem;
 }
 
 main #section1 #div-1 #strip {
     width: 100%;
     height: 22%;
-    border: 1px solid var(--light-grey);
+    border: 1px solid #D5D5D5;
     border-radius: 5px;
     display: flex;
-    box-shadow: 0px 0px 15px grey;
+    box-shadow: 0px 0px 35px #E3E3E3;
+    position: relative;
+    z-index: 5;
+    background-color: white;
 }
 
 main #section1 #div-1 .strip-item {
@@ -147,7 +172,14 @@ main #section1 #div-1 .strip-item {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 10px;   
+}
+
+main #section1 #hero{
+    position: absolute;
+    right: 39.3%;
+    top: 11%;
+    z-index: -1;
 }
 
 main #section1 #div-1 .strip-item #strip-img img {
@@ -157,27 +189,46 @@ main #section1 #div-1 .strip-item #strip-img img {
 
 main #section1 #div-1 #strip .strip-item #strip-detail #strip-detail-1 {
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 500;
     text-align: left;
+    font-style: italic;
+    
 }
 
 main #section1 #div-1 #strip .strip-item #strip-detail #strip-detail-2 {
-    font-size: 14px;
+    font-size: 0.7rem;
     color: var(--light-grey);
+    /* border: 1px solid red; */
 }
 
 main #section1 #div-2 {
     /* border: 1px solid black; */
-    height: 70vh;
+    height: 75vh;
     width: 30vw;
-    box-shadow: 0px 0px 10px limegreen;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 
 }
+
+main #section1 #div-2::before{
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, skyblue, rgb(224, 177, 202), skyblue);
+    background-size: 100%;
+    width: calc(95% );
+    height: calc(100%);
+    z-index: -1;
+    filter: blur(50px);
+}
+
 
 /* main #section1 #div-2 .div-2-border {
     border: 1px solid black;
@@ -188,7 +239,9 @@ main #section1 #div-2 #div-2-h1 {
 }
 
 main #section1 #div-2 #div-2-h1 h1 {
-    font-weight: 900;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: italic;
 }
 
 main #section1 #div-2 #div-2-h1 span {
@@ -197,7 +250,7 @@ main #section1 #div-2 #div-2-h1 span {
 
 main #section1 #div-2 #div-2-h1 p {
     margin-top: 10px;
-    color: grey;
+    color: #818D9D;
 }
 
 main #section1 #div-2 #fullName {
@@ -209,7 +262,8 @@ main #section1 #div-2 #fullName {
 }
 
 main #section1 #div-2 #fullName i {
-    font-size: 25px;
+    font-size: 1.2rem;
+    color: #818D9D;
 }
 
 main #section1 #div-2 #fullName #name:focus {
@@ -225,9 +279,9 @@ main #section1 #div-2 #fullName #name {
 }
 
 main #section1 #div-2 #fullName #name::placeholder {
-    font-size: 18px;
-    color: var(--light-grey);
+    font-size: 1rem;
     padding-left: 10px;
+    color: black;
 }
 
 main #section1 #div-2 #phone {
@@ -237,15 +291,16 @@ main #section1 #div-2 #phone {
     text-align: center;
     padding: 0px;
     border-radius: 10px;
+   
 }
 
-main #section1 #div-2 #phone #code {
-    background-color: rgb(249, 249, 249);
-    border: none;
-    height: 100%;
-    width: 20%;
-    font-size: 15px;
+main #section1 #div-2 #phone i {
+    font-size: 1.2rem;
+    color: #818D9D;
+    margin-left: -4rem;
 }
+
+
 
 main #section1 #div-2 #phone #number {
     background-color: rgb(249, 249, 249);
@@ -256,42 +311,51 @@ main #section1 #div-2 #phone #number {
 }
 
 main #section1 #div-2 #phone #number::placeholder {
-    font-size: 18px;
-    color: var(--light-grey);
+    font-size: 1rem;
+    color: #818D9D;
     padding-left: 10px;
 }
 
 main #section1 #div-2 button {
     height: 8vh;
-    background: linear-gradient(to right, blue, purple);
+    background: linear-gradient(45deg, #86a5cd, #4072ED, #8E38ED);
     opacity: 0.8;
     color: white;
     width: 90%;
     border-radius: 10px;
     border: none;
+    font-size: 1.1rem;
+    font-style: italic;
+    word-spacing: 0.2rem;
 }
 
 main #section1 #div-2 #div-2-details {
     height: 8vh;
     width: 90%;
-    color: var(--light-grey);
+    color: #818D9D;
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
 }
 
 main #section1 #div-2 #div-2-details span {
     height: 8vh;
     color: var(--main-blue);
+    font-size: 0.9rem;
 }
 
 main #section1 #div-1 #made-accio {
     /* border: 1px solid var(--light-grey); */
     display: flex;
-    box-shadow: 0px 0px 15px grey;
-    height: 7vh;
-    width: 25vw;
+    box-shadow: 0px 0px 40px rgb(180, 218, 234);
+    color: var(--light-grey);
+    height: 6vh;
+    width: 22vw;
     border-radius: 25px;
     justify-content: center;
     align-items: center;
-    font-weight: 900;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 5rem;
 }
 
 main #section1 #div-1 #made-accio i {
@@ -299,15 +363,19 @@ main #section1 #div-1 #made-accio i {
     padding-right: 5px;
 }
 
+
+
 /* 1: section1 is ended here */
 
 main #section2 {
-    background-color: rgb(223, 250, 247);
-    height: 90vh;
-    width: 100vw;
+    background-color: #ECF8FF;
+    height: max-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 5% 0% 8% 0%;
+    border: 1px solid lightgray;
 }
 
 main #section2 #heading {
@@ -321,11 +389,13 @@ main #section2 #heading {
 
 main #section2 #heading #small-heading {
     color: var(--main-blue);
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 main #section2 #heading #big-heading {
     color: var(--main-blue);
-    font-size: 30px;
+    font-size: 2.5rem;
 }
 
 main #section2 #two-card {
@@ -339,25 +409,73 @@ main #section2 #two-card {
 
 main #section2 #two-card #card1 {
     padding: 1rem;
-    height: 70vh;
-    width: 30vw;
-    border: 1px solid var(--light-grey);
+    height: 75vh;
+    width: 32vw;
+    border: 1px solid #818D9D;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-/* main #section2 #two-card #card2{
-    height: 65vh;
-    width: 30vw;
+main #section2 #two-card #card1:hover{
+    box-shadow: 0px 0px 100px rgb(151, 209, 232);
+    transition: all 0.2s ease-in-out;
+}
+
+#beg-tag{
+    background-color: var(--main-blue);
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9rem;
+    position: absolute;
+    top: -15px;
+}
+
+main #section2 #two-card #card1-b {
+    padding: 1rem;
+    height: 75vh;
+    width: 32vw;
+    border: 2px solid var(--main-blue);
     background-color: white;
-    border: 1px solid var(--light-grey);
-    border-radius: 5px;
-} */
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+main #section2 #two-card #card1-b:hover{
+    box-shadow: 0px 0px 100px rgb(151, 209, 232);
+    transition: all 0.2s ease-in-out;
+}
+
+
+main #section2 #two-card .card-beginner-blue{
+    border: 10px solid var(--light-grey);
+ }
+
+main #section2 #two-card #card1 img{
+    margin-bottom: -10px;
+}
+main #section2 #two-card #card1-b img{
+    margin-bottom: -10px;
+}
+
 main #section2 #two-card #card1 .card-1 {
+    display: flex;
+    /* border: 1px solid green; */
+    width: 90%;
+    justify-content: space-around;
+}
+
+main #section2 #two-card #card1-b .card-1 {
     display: flex;
     /* border: 1px solid green; */
     width: 90%;
@@ -369,12 +487,28 @@ main #section2 #two-card #card1 .card-1 #flex-1 {
     height: 7vh;
 }
 
+main #section2 #two-card #card1-b .card-1 #flex-1 {
+    width: 50%;
+    height: 7vh;
+}
+
 main #section2 #two-card #card1 .card-1 #flex-1 i {
     padding-right: 0.4rem;
     margin-left: 0.4rem;
 }
 
+main #section2 #two-card #card1-b .card-1 #flex-1 i {
+    padding-right: 0.4rem;
+    margin-left: 0.4rem;
+}
+
+
 main #section2 #two-card #card1 .card-1 .not i {
+    padding-right: 0.4rem;
+    margin-left: 0.4rem;
+}
+
+main #section2 #two-card #card1-b .card-1 .not i {
     padding-right: 0.4rem;
     margin-left: 0.4rem;
 }
@@ -384,46 +518,101 @@ main #section2 #two-card #card1 .card-1 #flex-2 {
     height: 7vh;
 }
 
+main #section2 #two-card #card1-b .card-1 #flex-2 {
+    width: 50%;
+    height: 7vh;
+}
+
 main #section2 #two-card #card1 .card-1-beginner {
     width: 70%;
     text-align: center;
     font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+main #section2 #two-card #card1-b .card-1-beginner {
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
 }
 
 main #section2 #two-card #card1 .card-1-bg {
-    width: 60%;
+    width: 67%;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
+}
+
+main #section2 #two-card #card1-b .card-1-bg {
+    width: 67%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
 }
 
 main #section2 #two-card #card1 .card-1-bg #bg-blue1,
 #bg-blue2 {
-    padding: 0.4rem;
-    background-color: rgb(223, 250, 247);
+    padding: 6px 15px 6px 15px;
+    background-color: #E0F3FF;
     border: none;
     border-radius: 10px;
-    font-size: 12px;
-    color: var(--main-blue);
+    font-size: 0.8rem;
+    color: #3385B8;
+}
+
+main #section2 #two-card #card1-b .card-1-bg #bg-blue1,
+#bg-blue2 {
+    padding: 6px 15px 6px 15px;
+    background-color: #E0F3FF;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #3385B8;
 }
 
 main #section2 #two-card #card1 .card-1-bg #bg-blue1-red,
 #bg-blue2-red {
-    padding: 0.4rem;
-    background-color: rgb(243, 236, 208);
+       padding: 6px 15px 6px 15px;
+    background-color: #FFEED8;
     border: none;
     border-radius: 10px;
-    font-size: 12px;
-    color: rgb(223, 192, 90);
+    font-size: 0.8rem;
+    color: #965400;
 }
 
-main #section2 #two-card #card1 .card-1 #flex-1,
-#flex-2 {
-    border-bottom: 1px solid var(--light-grey);
-    padding-top: 0.5rem;
-    /* text-align: center; */
+main #section2 #two-card #card1-b .card-1-bg #bg-blue1-red,
+#bg-blue2-red {
+       padding: 6px 15px 6px 15px;
+    background-color: #FFEED8;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #965400;
+}
+
+main #section2 #two-card #card1 .down-line{
+    border-bottom: 2px solid #C5C5C5;
+    padding: 3px 0px 5px 0px ;
+    /* margin-top: 10px; */
+}
+
+main #section2 #two-card #card1-b .down-line{
+    border-bottom: 2px solid #C5C5C5;
+    padding: 3px 0px 5px 0px ;
+    /* margin-top: 10px; */
 }
 
 main #section2 #two-card #card1 .not {
+    border: none;
+    width: 50%;
+    height: 7vh;
+    padding-top: 0.5rem;
+}
+
+main #section2 #two-card #card1-b .not {
     border: none;
     width: 50%;
     height: 7vh;
@@ -436,7 +625,19 @@ main #section2 #two-card #card1 .card-1 #flex-button-1 {
     color: var(--main-blue);
     border: 1px solid var(--main-blue);
     width: 45%;
-    height: 6vh;
+    height: 7vh;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+main #section2 #two-card #card1-b .card-1 #flex-button-1 {
+    background-color: white;
+    display: flex;
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+    width: 45%;
+    height: 7vh;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -446,18 +647,52 @@ main #section2 #two-card #card1 .card-1 #flex-button-1 i {
     margin-right: 1rem;
 }
 
+main #section2 #two-card #card1-b .card-1 #flex-button-1 i {
+    margin-right: 1rem;
+}
+
+.move-button{
+    margin: 20px 0px 10px 0px;
+}
+
+
 main #section2 #two-card #card1 .card-1 #flex-button-2 {
     background-color: var(--main-blue);
     display: flex;
     color: white;
     width: 45%;
-    height: 6vh;
+    height: 7vh;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
 }
+main #section2 #two-card #card1 .card-1 #flex-button-2:hover{
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 50px rgb(151, 209, 232);
+    transition: all 0.1s ease-out;
+}
+
+main #section2 #two-card #card1-b .card-1 #flex-button-2 {
+    background-color: var(--main-blue);
+    display: flex;
+    color: white;
+    width: 45%;
+    height: 7vh;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+main #section2 #two-card #card1-b .card-1 #flex-button-2:hover{
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 50px rgb(151, 209, 232);
+    transition: all 0.1s ease-out;
+}
 
 main #section2 #two-card #card1 .card-1 #flex-button-2 i {
+    margin-left: 1rem;
+}
+
+main #section2 #two-card #card1-b .card-1 #flex-button-2 i {
     margin-left: 1rem;
 }
 
@@ -466,15 +701,22 @@ main #section2 #two-card #card1 .card-1-p {
     font-size: 0.8rem;
 }
 
+main #section2 #two-card #card1-b .card-1-p {
+    color: var(--light-grey);
+    font-size: 0.8rem;
+}
+
 /* 2: section2 is ended here */
 
 main #section3 {
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    border: 1px solid lightgray;
+    padding: 5%;
 }
 
 main #section3 .sec-3 {
@@ -483,52 +725,56 @@ main #section3 .sec-3 {
     height: 5vh;
     justify-content: center;
     align-items: center;
+    margin-top: 1%;
 }
 
 main #section3 #small {
-    font-size: 13px;
+    font-size: 0.9rem;
     color: var(--main-blue);
 }
 
 main #section3 #black-big {
-    font-size: 30px;
+    font-size: 2.5rem;
 }
 
 main #section3 #blue-big {
-    font-size: 30px;
+    font-size: 2.5rem;
     color: var(--main-blue);
 }
 
 main #section3 #small-grey {
-    font-size: 12px;
+    font-size: 0.9rem;
     color: var(--light-grey);
 }
 
 main #section3 #logo-container {
-    width: 70%;
-    height: 40vh;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    align-items: center;
+    width: 99%;
+    height: fit-content;
+    display: flex;
+  align-items: center;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    margin: 1rem;
+}
+main #section3 #logo-container #img-flex{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    width: 100%;
 }
 
+
 main #section3 #logo-container .img {
-    width: 50%;
-    height: 40%;
+    width: 14%;
+    height: 10vh;
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    /* border: 1px solid red; */
+    margin: 1rem;
 }
 
 main #section3 #logo-container .img img {
     width: 100%;
     height: 100%;
-}
-
-main #section3 #logo-container .img .change {
-    width: 80%;
-    height: 80%;
 }
 
 main #section3 button {
@@ -538,6 +784,15 @@ main #section3 button {
     padding: 1rem;
     border: none;
     border-radius: 5px;
+    margin-top: 1%;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+main #section3 button:hover{
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 100px rgb(151, 209, 232);
 }
 
 main #section3 button i {
@@ -548,67 +803,85 @@ main #section3 button i {
 
 main #section4{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-    padding: 3rem;
+     padding: 5rem 3rem 5rem 3rem;
 }
 
 main #section4 h1{
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 main #section4 #small--grey{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
-    color: var(--light-grey);
+    color: #969696;
 }
 
 main #section4 #grid{
-    width: 70vw;
-    height: fit-content;
+    width: 90%;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     gap: 10px;
+    /* border: 1px solid red; */
+}
+
+main #section4 #grid #col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 main #section4 #grid #grid-card{
-    width: 30%;
-    height: fit-content;
-    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    border: 2px solid #e2e2e3;
     padding: 1rem;
-    /* margin: auto; */
+    margin: 10px;
+    border-radius: 10px;
 }
 
 main #section4 #grid #grid-card #date{
     margin-top: 0.8rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 main #section4 #grid #grid-card #pra{
     margin-top: 1rem;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 main #section4 #grid #grid-card .fade{
-    color: var(--light-grey);
+    color: #969696;
+    font-size: 0.8rem;
+}
+main #section4 #grid #grid-card .fade-new{
+    color: #969696;
     font-size: 0.8rem;
 }
 
 main #section4 #grid #grid-card #profile{
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid red; */
+    align-items: center;
 }
 
 main #section4 #grid #grid-card #profile #name{
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-left: -70px;
 }
 
 main #section4 #grid #grid-card #profile-img{
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 
 }
 
@@ -618,8 +891,8 @@ main #section4 #grid #grid-card #profile-img img{
     height: 100%;
 }
 main #section4 #grid #grid-card #profile #linked-in{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 main #section4 #grid #grid-card #profile #linked-in img{
@@ -627,11 +900,193 @@ main #section4 #grid #grid-card #profile #linked-in img{
     height: 100%;
 }
 
-main #section4 #grid .margin-up1{
-    margin-top: -3.5rem;
-    /* position: absolute; */
-}
-main #section4 #grid .margin-up2{
-    margin-top: -1.5rem;
-    /* position: absolute; */
+/* CSS IS  ENDED HERE */
+
+
+
+@media only screen and (min-width:768px) and (max-width:992px){
+    /* media query for tablet viewport */
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        z-index: 100;
+    }
+    header{
+        z-index: 50;
+    }
+    nav #nav2{
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav #nav2 #nav-2{
+        width: 80%;
+    }
+    nav #nav-1 img{
+        width: 180px;
+    }
+
+    /* nav is ended here */
+
+    main #section1 #hero{
+        position: absolute;
+        right: 43%;
+        top: 10.4%;
+        z-index: -1;
+        width: 70px;
+    }
+
+    main #section1{
+        justify-content: space-around;
+    }
+
+    main #section1 #div-1 h1{
+        font-size: 2rem;
+    }
+    main #section1 #div-1 p{
+        font-size: 1rem;
+    }
+
+    main #section1 #div-1 #strip{
+        width: 400px;
+    }
+
+    main #section1 #div-1 #strip .strip-item #strip-img {
+        width: 30px;
+    }
+
+    main #section1 #div-1 #strip .strip-item #strip-detail #strip-detail-1{
+        font-size: 0.8rem;
+        margin-left: 10px;
+     }
+
+     main #section1 #div-1 #strip .strip-item #strip-detail #strip-detail-2{
+        font-size: 0.5rem;
+     }
+
+     main #section1 #div-1 #made-accio{
+        width: 250px;
+        font-size: 0.7rem;
+     }
+
+     main #section1 #div-2{
+        height: 50vh;
+     }
+
+     main #section1 #div-2 #div-2-h1 h1{
+        font-size: 1.2rem;
+     }
+
+     main #section1 #div-2 #div-2-h1 p{
+        font-size: 0.6rem;
+     }
+
+     main #section1 #div-2 #fullName i{
+        font-size: 0.7rem;
+        margin-left: 5px;
+     }
+
+     main #section1 #div-2 #fullName #name::placeholder{
+        font-size: 0.7rem;
+     }
+
+     main #section1 #div-2 #phone i{
+        font-size: 0.7rem;
+        margin-left: -20px;
+     }
+
+     main #section1 #div-2 #phone #number::placeholder{
+        font-size: 0.7rem;
+     }
+
+     main #section1 #div-2 button{
+        font-size: 0.8rem;
+        word-spacing: 0.1rem;
+     }
+
+     /* section-1 is ended here */
+
+    main #section2 #heading #small-heading{
+        font-size: 1rem;
+     }
+
+     main #section2 #heading #big-heading{
+        font-size: 2rem;
+     }
+
+     main #section2 #two-card #card1-b{
+        width: 350px;
+     }
+
+     main #section2 #two-card #card1-b .card-1-bg{
+        /* border: 1px solid red; */
+        width: 90%;
+     }
+
+     main #section2 #two-card #card1-b .card-1-bg #bg-blue1,#bg-blue2{
+        width: 150px;
+        font-size: 0.7rem;
+     }
+
+     main #section2 #two-card #card1-b .card-1-p{
+        font-size: 0.7rem;
+     }
+
+     main #section2 #two-card #card1-b .card-1 .not,#flex-1,#flex-2,#flex-button-1,#flex-button-2{
+        font-size: 0.8rem;
+     }
+
+     main #section2 #two-card #card1{
+        width: 350px;
+     }
+     main #section2 #two-card #card1 .card-1-bg{
+        /* border: 1px solid red; */
+        width: 90%;
+     }
+
+     main #section2 #two-card #card1 .card-1-bg #bg-blue1-red{
+        width: 150px;
+        font-size: 0.7rem;
+     }
+
+     main #section2 #two-card #card1 .card-1-bg #bg-blue2-red{
+        font-size: 0.7rem;
+     }
+
+     main #section2 #two-card #card1 .card-1-p{
+        font-size: 0.7rem;
+     }
+
+     main #section2 #two-card #card1 .card-1 #flex-1,#flex-2{
+        font-size: 0.8rem;
+     }
+
+     main #section2 #two-card #card1 .card-1 .not{
+        font-size: 0.8rem;
+     }
+
+     /* section2 is ended here */
+
+
+     main #section3 #small{
+        font-size: 0.8rem;
+     }
+
+     main #section3 #black-big{
+        font-size: 2rem;
+     }
+     main #section3 #blue-big{
+        font-size: 2rem;
+     }
+
+     main #section3 #logo-container #img-flex{
+        flex-wrap: nowrap;
+     }
+
+     main #section3 button{
+        width: 200px;
+        font-size: 0.8rem;
+     }
+
 }
